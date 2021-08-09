@@ -14,7 +14,6 @@ class Solution(object):
         :type nums: List[int]
         :rtype: List[List[int]]
         """
-        #思路: 首先将数组排序，然后有一层for循环，i从下标为0的地方开始，同时定一个下标left 定义在i+1的位置上，定义下标right 在数组结尾的位置上，如果 s = nums[i] + nums[i+1] + nums[right] <0 则 将left 向右一移一位，如果>0 就将right 向左移一位， 若 等于0，则记录当前的三个数，去除 重复的三个数，然后将left 和 right同时向中间收缩，
         nums = sorted(nums)
         ans = []
         for i in range(len(nums)):
